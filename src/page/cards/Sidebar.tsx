@@ -10,7 +10,7 @@ const Sidebar: React.FC<SidebarProps> = ({ onSelect }) => {
       style={{
         width: "200px",
         height: "100vh",
-        background: "green",
+        background: "#f5f5f5",
         padding: "20px",
         boxShadow: "-2px 0 5px rgba(0,0,0,0.1)",
       }}
@@ -23,7 +23,7 @@ const Sidebar: React.FC<SidebarProps> = ({ onSelect }) => {
           </button>
         </li>
         <li style={{ marginBottom: "10px" }}>
-          <button style={{ width: "100%" }} onClick={() => onSelect("law")}>
+          <button style={{ width: "100%" }} onClick={() => onSelect("power")}>
             数据
           </button>
         </li>
@@ -32,9 +32,24 @@ const Sidebar: React.FC<SidebarProps> = ({ onSelect }) => {
             创建数据
           </button>
         </li>
+        {/* <li style={{ marginBottom: "10px" }}>
+          <button style={{ width: "100%" }} onClick={() => onSelect("change")}>
+            修改数据
+          </button>
+        </li>
+        <li style={{ marginBottom: "10px" }}>
+          <button style={{ width: "100%" }} onClick={() => onSelect("delete")}>
+            删除数据
+          </button>
+        </li> */}
         <li style={{ marginBottom: "10px" }}>
           <button style={{ width: "100%" }} onClick={() => onSelect("Chat")}>
             聊天
+          </button>
+        </li>
+        <li style={{ marginBottom: "10px" }}>
+          <button style={{ width: "100%" }} onClick={() => onSelect("data")}>
+            数据
           </button>
         </li>
       </ul>

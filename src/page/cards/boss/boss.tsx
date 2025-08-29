@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import Sidebar from "./Sidebar";
-import BossTable from "./bosstable";  // ✅ 引入 BossTable
+import Sidebar from "../Sidebar";
+import Table from "../table"
 import Chat from '../../../Chat/Chat';
 
 interface Message {
@@ -128,7 +128,7 @@ function App() {
       setSelectedMessages(conversation.messages);
     } else {
       // 如果 power 不匹配，弹出提示
-      alert('Power does not match!');
+      alert('你没有权限查看这段对话');
       setSelectedMessages([]); // 清空消息
     }
   };
@@ -153,9 +153,9 @@ function App() {
             <p>欢迎来到Boss管理系统！</p>
           </div>
         )}
-        {activeTab === "Boss" && (
+        {activeTab === "power" && (
           <div>
-            <BossTable />
+            <Table url="http://localhost:8000/boss" title="Boss Management" names="name"/>
           </div>
         )}
         {activeTab === "make" && (
