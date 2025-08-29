@@ -32,7 +32,11 @@ const Sidebar: React.FC<SidebarProps> = ({ onSelect }) => {
             创建数据
           </button>
         </li>
-
+        <li style={{ marginBottom: "10px" }}>
+          <button style={{ width: "100%" }} onClick={() => onSelect("Chat")}>
+            聊天
+          </button>
+        </li>
       </ul>
     </div>
   );

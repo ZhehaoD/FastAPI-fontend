@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 
 // 导入页面组件
+import Chat from './Chat/Chat';
 import Login from './page/login/login';
 import Register from './page/register/register';
 import Boss from './page/cards/boss/boss';

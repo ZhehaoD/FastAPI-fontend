@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Sidebar from "./Sidebar";
 import LawTable from "./lawtable";  // ✅ 引入 BossTable
+import Chat from '../../../Chat/Chat';
 
 function App() {
   const [activeTab, setActiveTab] = useState<string>("home"); // 默认显示主页
@@ -48,6 +49,11 @@ function App() {
               onChange={(e) => setcompany(e.target.value)}
             />
             <button onClick={handleRegister}>创建</button>
+          </div>
+        )}
+        {activeTab === "Chat" && (
+          <div>
+            <Chat />
           </div>
         )}
       </div>
